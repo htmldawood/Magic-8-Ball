@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>8 Ball</title>
+<style>
+.button {
+  font-size: 48px;
+}  
+</style>
+  <script>
+    function reload() {
+      location.reload();   
+    }
+  </script>
+</head>
+<body style="background-image:url('BlueBG.png')">
+   
+  <div style="text-align: center; font-size: 48pt;"/>
+<h1>8 Ball</h1>
+   </div>
+   
+   <div style="font-size: 23pt;"/>
+<h1>Say what you want and then click the ball!</h1>
+   </div>   
+
+
+   <img id="8ball" src="MAGIC8BALL.png" style="cursor: pointer;" onclick="changeImage()">
+<script>
+   
+  const images =["Ask-Again-Later.png", "DCOI.png", "Most Likely.png", "My-Sources-Say-No.png", "Outlook-Good.png", "RHTA.png", "Without-A-Doubt.png"]
+  
+  let currentIndex = 0;
+  
+  function changeImage() {
+    const randomNumber = Math.floor(Math.random() * 7); 
+    
+    const imageElement = document.getElementById("8ball");
+    
+    imageElement.src = images[randomNumber]; 
+  }    
+</script>
+
+<input type="button" class="button" value="Reset" onclick="reload()"/>
+
+</body>
+</html>
